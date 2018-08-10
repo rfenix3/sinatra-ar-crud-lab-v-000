@@ -8,19 +8,17 @@ class ApplicationController < Sinatra::Base
     set :views, 'app/views'
   end
 
-  get '/posts/new' do
+  get '/posts/new' do #loads new form
     erb :new
   end
 
   #done up to here
-
-  post '/posts' do
+  post '/posts' do  #creates a post
     @post = Post.create(params)
-    binding.pry
     redirect to '/posts'
   end
 
-  get '/posts' do
+  get '/posts' do #loads index page
     @posts = Post.all
     erb :index
   end
