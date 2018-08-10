@@ -1,7 +1,7 @@
 <h1>This is the index file</h1>
 <% @posts.all.each do |post| %>
   <div>
-    <p><%= post.name%> </p>
-    <p><%= post.content %></p>
+    <p>Post Title: <%= post.name%> </p>
+    <p>Content: <%= post.content %></p>
   </div>
 <% end %>
