@@ -1,6 +1,6 @@
 <h1>This is the index file</h1>
-<% @posts.all.each do |post| %>
-<% binding.pry %>
+<% @posts.each do |post| %>
+<% #binding.pry %>
   <div>
     <p>Post Title: <%= post.name%> </p>
     <p>Content: <%= post.content %></p>
