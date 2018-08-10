@@ -20,6 +20,7 @@ class ApplicationController < Sinatra::Base
 
   get '/posts' do #loads index page
     @posts = Post.all
+    binding.pry
     erb :index
   end
 
